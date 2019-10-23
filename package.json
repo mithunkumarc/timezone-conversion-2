@@ -1,0 +1,9 @@
+{
+  "name": "js-ykguwj",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27"
+  }
+}
