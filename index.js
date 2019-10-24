@@ -1,6 +1,7 @@
 let moment = require('moment')
 let moment_tz = require('moment-timezone')
 
+
 function testData(interval){
   //let interval = '10/23/2019 02:00 AM - 02:30 AM';
   let intervalDate = interval.slice(0,10);//date
@@ -19,7 +20,8 @@ function testData(interval){
   function getLocalTimezone(date,time){
       let dateFormat = 'MM/DD/YYYY hh:mm A';
       let browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      return moment(date+" "+time).tz(browserTimezone).format(dateFormat);   
+      let localTime = moment(date+" "+time).tz('America/Anchorage').format(dateFormat);   
+      return moment(localTime).tz('Asia/Kolkata').format(dateFormat);
   }
 }
 //console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
